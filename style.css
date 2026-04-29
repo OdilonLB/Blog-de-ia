@@ -1,31 +1,31 @@
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
     :root {
-      --cream: #faf7f2;
-      --warm-white: #f5f0e8;
-      --ink: #1a1612;
-      --ink-soft: #3d3530;
-      --ink-light: #7a6f66;
-      --accent: #8b4513;
-      --accent-light: #c07840;
-      --border: #d9d0c3;
-      --border-light: #ece5d8;
+      --cream: #1C1A2E;
+      --warm-white: #252338;
+      --ink: #F0EAD6;
+      --ink-soft: #C8BFA8;
+      --ink-light: #9A9080;
+      --accent: #D44000;
+      --accent-light: #e86020;
+      --border: #3A3750;
+      --border-light: #2E2C45;
     }
 
     html { scroll-behavior: smooth; }
 
     body {
-      font-family: 'Source Serif 4', Georgia, serif;
-      background: var(--cream);
-      color: var(--ink);
+      font-family: 'Niramit', sans-serif;
+      background: var(--ink);
+      color: var(--cream);
       font-size: 17px;
       line-height: 1.75;
     }
 
     /* ── HEADER ── */
     header {
-      background: var(--ink);
-      color: var(--cream);
+      background: var(--cream);
+      color: var(--ink);
       position: sticky;
       top: 0;
       z-index: 100;
@@ -43,17 +43,17 @@
     }
 
     .site-logo {
-      font-family: 'Playfair Display', Georgia, serif;
+      font-family: 'Zen Old Mincho', serif;
       font-size: 1.5rem;
       font-weight: 700;
-      color: var(--cream);
+      color: var(--ink);
       text-decoration: none;
     }
 
     .site-logo span { color: var(--accent-light); }
 
     nav a {
-      color: var(--border);
+      color: var(--ink);
       text-decoration: none;
       font-size: 0.85rem;
       letter-spacing: 0.12em;
@@ -62,7 +62,24 @@
       transition: color 0.2s;
     }
 
-    nav a:hover, nav a.active { color: var(--accent-light); }
+    nav a:hover, nav a.active { color: var(--accent); }
+
+    /* ── PARTICLES ── */
+    #particles-canvas {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    .page-hero .eyebrow,
+    .page-hero h1,
+    .hero-divider {
+      position: relative;
+      z-index: 1;
+    }
 
     /* ── PAGE HERO ── */
     .page-hero {
@@ -96,7 +113,7 @@
     }
 
     .page-hero h1 {
-      font-family: 'Playfair Display', Georgia, serif;
+      font-family: 'Zen Old Mincho', serif;
       font-size: clamp(2.5rem, 5vw, 4rem);
       font-weight: 700;
       line-height: 1.15;
@@ -123,7 +140,7 @@
 
     /* ── INTRO CARD ── */
     .intro-card {
-      background: #fff;
+      background: #26243A;
       border: 1px solid var(--border);
       padding: 2.5rem 3rem;
       display: grid;
@@ -148,7 +165,7 @@
     }
 
     .intro-text h2 {
-      font-family: 'Playfair Display', Georgia, serif;
+      font-family: 'Zen Old Mincho', serif;
       font-size: 1.8rem;
       font-weight: 700;
       margin-bottom: 0.3rem;
@@ -179,7 +196,7 @@
     }
 
     .fact-item {
-      background: #fff;
+      background: #26243A;
       border: 1px solid var(--border);
       padding: 1.5rem;
       text-align: center;
@@ -202,7 +219,7 @@
     }
 
     .fact-value {
-      font-family: 'Playfair Display', Georgia, serif;
+      font-family: 'Zen Old Mincho', serif;
       font-size: 1rem;
       font-weight: 700;
       color: var(--ink);
@@ -212,7 +229,7 @@
     .about-section { margin-bottom: 2.75rem; animation: fadeUp 0.6s 0.5s ease both; }
 
     .section-heading {
-      font-family: 'Playfair Display', Georgia, serif;
+      font-family: 'Zen Old Mincho', serif;
       font-size: 1.45rem;
       font-weight: 700;
       margin-bottom: 1.25rem;
@@ -221,6 +238,7 @@
       display: flex;
       align-items: center;
       gap: 0.6rem;
+      color: var(--ink);
     }
 
     .about-section p {
@@ -245,7 +263,7 @@
     .grad-icon { font-size: 2rem; flex-shrink: 0; }
 
     .grad-banner p {
-      font-family: 'Playfair Display', serif;
+      font-family: 'Zen Old Mincho', serif;
       font-style: italic;
       font-size: 0.97rem;
       color: var(--ink-soft);
@@ -269,7 +287,7 @@
 
     .game-info strong {
       display: block;
-      font-family: 'Playfair Display', serif;
+      font-family: 'Zen Old Mincho', serif;
       font-size: 1rem;
       margin-bottom: 0.2rem;
       color: var(--ink);
@@ -301,7 +319,7 @@
 
     .anime-fav-title {
       display: block;
-      font-family: 'Playfair Display', serif;
+      font-family: 'Zen Old Mincho', serif;
       font-size: 1.25rem;
       color: var(--cream);
       margin-bottom: 0.5rem;
@@ -322,7 +340,7 @@
     .anime-list li:last-child { border-bottom: none; }
     .anime-dot { color: var(--accent); font-size: 1rem; flex-shrink: 0; margin-top: 0.1rem; }
 
-    .anime-item-info strong { display: block; font-size: 0.97rem; color: var(--ink); margin-bottom: 0.2rem; }
+    .anime-item-info strong { display: block; font-size: 0.97rem; color: var(--ink); margin-bottom: 0.2rem; font-family: 'Zen Old Mincho', serif; }
     .anime-item-info span { font-size: 0.85rem; color: var(--ink-light); line-height: 1.6; }
 
     /* ── TAGS ── */
@@ -349,14 +367,14 @@
     }
 
     .food-card {
-      background: #fff;
+      background: #26243A;
       border: 1px solid var(--border);
       padding: 1.25rem;
       text-align: center;
     }
 
     .food-card .food-icon { font-size: 2.2rem; display: block; margin-bottom: 0.5rem; }
-    .food-card span { font-size: 0.85rem; font-weight: 600; color: var(--ink-soft); }
+    .food-card span { font-size: 0.85rem; font-weight: 600; color: var(--ink-soft); font-family: 'Zen Old Mincho', serif; }
 
     /* ── PLACES GRID ── */
     .places-grid {
@@ -367,7 +385,7 @@
     }
 
     .place-card {
-      background: #fff;
+      background: #26243A;
       border: 1px solid var(--border);
       padding: 1.5rem;
       display: flex;
@@ -377,7 +395,7 @@
     }
 
     .place-card:hover {
-      box-shadow: 4px 4px 0 var(--border);
+      box-shadow: 4px 4px 0 var(--accent);
       transform: translate(-2px, -2px);
     }
 
@@ -385,7 +403,7 @@
 
     .place-info strong {
       display: block;
-      font-family: 'Playfair Display', serif;
+      font-family: 'Zen Old Mincho', serif;
       font-size: 1rem;
       color: var(--ink);
       margin-bottom: 0.35rem;
@@ -405,7 +423,7 @@
     }
 
     .frase-aspas {
-      font-family: 'Playfair Display', serif;
+      font-family: 'Zen Old Mincho', serif;
       font-size: 6rem;
       color: var(--border);
       line-height: 0;
@@ -416,7 +434,7 @@
     }
 
     .frase-texto {
-      font-family: 'Playfair Display', Georgia, serif;
+      font-family: 'Zen Old Mincho', serif;
       font-size: clamp(1.1rem, 2.5vw, 1.45rem);
       font-style: italic;
       color: var(--ink);
@@ -441,7 +459,7 @@
     }
 
     .closing-box p {
-      font-family: 'Playfair Display', Georgia, serif;
+      font-family: 'Zen Old Mincho', serif;
       font-size: 1.2rem;
       font-style: italic;
       line-height: 1.6;
